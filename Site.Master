@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Dashboard_Chatbot.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="pt">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - Dashboard Atendimento</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="Content/bootstrap.min.css">
+</head>
+<body>
+    <form>
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">
+                <img src="Images/LogoCoobSilver.png" alt="Coobrastur logo" style="margin-top: 12px; margin-left: 10%; width: 120px; height: 30px">
+            </a>
+        </nav>
+
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        </asp:ContentPlaceHolder>
+        <hr />
+        <footer>
+         
+        </footer>
+        <div class="text-center  bg-dark" style="padding: 20px;">
+              <p style="color: white;">&copy; <%: DateTime.Now.Year %> - Coobrastur &copy</p>
+        </div>
+    </form>
+    <script src="Scripts/jquery-3.4.1.slim.js" type="text/javascript"></script>
+    <script src="Scripts/popper.min.js" type="text/javascript"></script>
+    <script src="Scripts/bootstrap.min.js" type="text/javascript"></script>
+</body>
+</html>
